@@ -93,7 +93,7 @@ const Real EINTCLAMP=100000.; /* Clamp pairwise internal energies (kcal/mol )  *
 
 #define MAX_MAPS_PAD 0       // Use this to pad MAX_MAPS to a power of 2, for presumably-faster memory access
 #define NUM_NON_VDW_MAPS 2   // Number of electrostatic and desolvation maps
-#define MAX_ATOM_TYPES (16 - NUM_NON_VDW_MAPS)    /* Maximum number of atom types set to keep MAX_MAPS a power of 2 */
+#define MAX_ATOM_TYPES (64 - NUM_NON_VDW_MAPS)    /* Maximum number of atom types set to keep MAX_MAPS a power of 2 */
 #define MAX_MAPS (MAX_ATOM_TYPES + NUM_NON_VDW_MAPS + MAX_MAPS_PAD) /* Maximum number of energy maps        */
                             /* 0,1,2,... are for atomic interactions          */
                             /* last two are for electrostatics and desolvation */
