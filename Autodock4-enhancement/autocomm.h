@@ -2,7 +2,7 @@
 
  $Id: autocomm.h,v 1.23 2012/04/17 04:06:10 mp Exp $
 
- AutoDock  
+ AutoDock
 
 Copyright (C) 2009 The Scripps Research Institute. All rights reserved.
 
@@ -82,7 +82,7 @@ const unsigned int MAX_LINES=256;    /* Number of lines in parameter file       
 const /* not unsigned */ int LINE_LEN=140;    /* Line length in characters                      */
 #else
 const /* not unsigned */ int LINE_LEN=256;    /* Line length in characters                      */
-#endif 
+#endif
 #endif
 const /* not unsigned */ int LINE_LEN=1100;    /* Line length in characters                      */
 
