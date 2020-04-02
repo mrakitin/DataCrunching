@@ -34,15 +34,15 @@ do
   fi
   cd $id
   echo "$smiles" | obabel -h --gen3d -ismi -omol2 > $id.mol2
-  pythonsh ../Utilities24/prepare_ligand4.py -l $id.mol2  -o $id.pdbqt
+  pythonsh $AUTODOCKTOOLS_UTIL/prepare_ligand4.py -l $id.mol2  -o $id.pdbqt
   if [[ $# -eq 4 ]]
   then
-    pythonsh ../Utilities24/prepare_gpf4.py  -l $id.pdbqt -r $1.pdbqt -p npts="$4" -p gridcenter="$3" -o $id.gpf
-    pythonsh ../Utilities24/prepare_dpf42.py -l $id.pdbqt -r $1.pdbqt -o $id.dpf
+    pythonsh $AUTODOCKTOOLS_UTIL/prepare_gpf4.py  -l $id.pdbqt -r $1.pdbqt -p npts="$4" -p gridcenter="$3" -o $id.gpf
+    pythonsh $AUTODOCKTOOLS_UTIL/prepare_dpf42.py -l $id.pdbqt -r $1.pdbqt -o $id.dpf
   elif [[ $# -eq 5 ]]
   then
-    pythonsh ../Utilities24/prepare_gpf4.py  -l $id.pdbqt -r $1.pdbqt -x $5.pdb -p npts="$4" -p gridcenter="$3" -o $id.gpf
-    pythonsh ../Utilities24/prepare_dpf42.py -l $id.pdbqt -r $1.pdbqt -x $5.pdb -o $id.dpf
+    pythonsh $AUTODOCKTOOLS_UTIL/prepare_gpf4.py  -l $id.pdbqt -r $1.pdbqt -x $5.pdb -p npts="$4" -p gridcenter="$3" -o $id.gpf
+    pythonsh $AUTODOCKTOOLS_UTIL/prepare_dpf42.py -l $id.pdbqt -r $1.pdbqt -x $5.pdb -o $id.dpf
   else
     echo "invalid number of arguments $#"
     echo "should be 4 or 5"
@@ -51,8 +51,8 @@ do
   autogrid4 -p $id.gpf -l $id.glg
   for it in `seq 1 3`
   do
-    echo "autodock4.omp -p $id.dpf -l $id.$it.dlg"
-    autodock4.omp -p $id.dpf -l $id.$it.dlg
+    echo "autodock4 -p $id.dpf -l $id.$it.dlg"
+    autodock4 -p $id.dpf -l $id.$it.dlg
   done 
   cd ..
 done < $2
