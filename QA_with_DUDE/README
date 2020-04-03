@@ -1,0 +1,12 @@
+DUD-E
+=====
+
+The tarball contains all the data needed to run a docking
+campaign on a single target from the DUD-E benchmark.
+I have picked the smallest example, the INHA receptor,
+with just 44 active ligands and some 2300 decoys. 
+When docking the ligands should bind reasonably well,
+whereas the decoys should not bind.
+I am providing this material just in case someone wants to
+play with this and see how well Autodock4 does on this
+example.
