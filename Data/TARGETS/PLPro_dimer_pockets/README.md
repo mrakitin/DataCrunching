@@ -23,7 +23,7 @@ could be reasonable targets (by looking at the druggability scores):
 - pocket 24 : double checking
 - pocket 46 : double checking
 - pocket 47 : double checking
-- pocket 50
+- pocket 50 : Running by Oleg Tchoubar (04/04/2020)
 
 ## Pocket 50
 

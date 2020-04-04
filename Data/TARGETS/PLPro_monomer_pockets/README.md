@@ -20,8 +20,10 @@ pocket can be used to define the box that contains the pocket. From
 Looking at `PLPro_chainA_info.txt` we can find that the following pockets
 could be reasonable targets (by looking at the druggability scores):
 
-- pocket 6
-- pocket 23
+- pocket 3
+- pocket 4
+- pocket 6  : Running by Dean Hidas  (04/04/2020)
+- pocket 23 : Running By Martin Purschke (04/04/2020)
 
 ## Pocket 6
 
