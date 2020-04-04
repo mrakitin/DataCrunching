@@ -1,5 +1,5 @@
 High: 
-ml.3CLPro_pocket1_dock.csv
+ml.3CLPro_pocket1_dock.csv     - running
 ml.ADRP-ADPR_pocket1_dock.csv
 ml.ADRP-ADPR_pocket5_dock.csv
 ml.ADRP_pocket12_dock.csv
@@ -10,22 +10,17 @@ ml.Nsp10_pocket26_dock.csv
 ml.Nsp10_pocket3_dock.csv
 ml.Nsp9_pocket2_dock.csv
 ml.Nsp9_pocket7_dock.csv
-ml.PLPro_pocket23_dock.csv
-ml.PLPro_pocket3_dock.csv
-ml.PLPro_pocket4_dock.csv
-ml.PLPro_pocket50_dock.csv
-ml.PLPro_pocket6_dock.csv
+ml.PLPro_pocket23_dock.csv     - running
+ml.PLPro_pocket3_dock.csv      - running
+ml.PLPro_pocket4_dock.csv      - prepared
+ml.PLPro_pocket50_dock.csv     - running
+ml.PLPro_pocket6_dock.csv      - running
 ml.CoV_pocket1_dock.csv
 ml.CoV_pocket2_dock.csv
 ml.orf7a_pocket2_dock.csv
 ml.nsp15_pocket1_dock.csv
 ml.nsp15_pocket2_dock.csv
 
-
-
-
-
-10:37
 Medium:
 ml.Mpro-x0072_dock.csv
 ml.Mpro-x0104_dock.csv
@@ -54,6 +49,7 @@ ml.6vww_pocket3_dock.csv
 ml.6vww_pocket6_dock.csv
 ml.6vww_pocket8_dock.csv
 ml.6vww_pocket9_dock.csv
+
 Low:
 ml.CoV_pocket10_dock.csv
 ml.CoV_pocket8_dock.csv

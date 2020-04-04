@@ -20,9 +20,9 @@ pocket can be used to define the box that contains the pocket. From
 Looking at `PLPro_chainsAB_info.txt` we can find that the following pockets
 could be reasonable targets (by looking at the druggability scores):
 
-- pocket 24 : double checking
-- pocket 46 : double checking
-- pocket 47 : double checking
+- pocket 24 : no priority (the same as the monomer pockets?)
+- pocket 46 : no priority (the same as the monomer pockets?)
+- pocket 47 : no priority (the same as the monomer pockets?)
 - pocket 50 : Running by Oleg Tchoubar (04/04/2020)
 
 ## Pocket 50
