@@ -38,21 +38,17 @@ do
   if [[ $# -eq 4 ]]
   then
     pythonsh $AUTODOCKTOOLS_UTIL/prepare_gpf4.py  -l $id.pdbqt -r $1.pdbqt -p npts="$4" -p gridcenter="$3" -o $id.gpf
-    pythonsh $AUTODOCKTOOLS_UTIL/prepare_dpf42.py -l $id.pdbqt -r $1.pdbqt -o $id.dpf
+    pythonsh $AUTODOCKTOOLS_UTIL/prepare_dpf42.py -l $id.pdbqt -r $1.pdbqt -p ga_run=20 -o $id.dpf
   elif [[ $# -eq 5 ]]
   then
     pythonsh $AUTODOCKTOOLS_UTIL/prepare_gpf4.py  -l $id.pdbqt -r $1.pdbqt -x $5.pdb -p npts="$4" -p gridcenter="$3" -o $id.gpf
-    pythonsh $AUTODOCKTOOLS_UTIL/prepare_dpf42.py -l $id.pdbqt -r $1.pdbqt -x $5.pdb -o $id.dpf
+    pythonsh $AUTODOCKTOOLS_UTIL/prepare_dpf42.py -l $id.pdbqt -r $1.pdbqt -x $5.pdb -p ga_run=20 -o $id.dpf
   else
     echo "invalid number of arguments $#"
     echo "should be 4 or 5"
     exit 1
   fi
   autogrid4 -p $id.gpf -l $id.glg
-  for it in `seq 1 3`
-  do
-    echo "autodock4 -p $id.dpf -l $id.$it.dlg"
-    autodock4 -p $id.dpf -l $id.$it.dlg
-  done 
+  autodock4 -p $id.dpf -l $id.dlg
   cd ..
 done < $2

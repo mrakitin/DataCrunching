@@ -1,3 +1,11 @@
+# This FIX is now obsolete
+
+The fix given here is now obsolete as the problem has been fixed in 
+main OpenBabel repo. See
+https://github.com/openbabel/openbabel/issues/2144 and
+https://github.com/openbabel/openbabel/pull/2150
+for details.
+
 # OpenBabel 3.0.0 Fix
 
 OpenBabel can be used to transform SMILES strings to 3D structures stored in
