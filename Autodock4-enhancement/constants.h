@@ -2,7 +2,7 @@
 
  $Id: constants.h,v 1.44 2014/06/12 01:44:07 mp Exp $
 
- AutoDock 
+ AutoDock
 
 Copyright (C) 2009 The Scripps Research Institute. All rights reserved.
 
@@ -110,7 +110,7 @@ Copyright (C) 2009 The Scripps Research Institute. All rights reserved.
 #endif
 
 #define MAX_TREES    8        /* Maximum number of torsion trees */
-#define MAX_TORS     272      /* Maximum number of torsions in Small Molecule. (256+16, was originally 32) */ 
+#define MAX_TORS     272      /* Maximum number of torsions in Small Molecule. (256+16, was originally 32) */
 #define MAX_TORS_IN_ROTAMER 8 /* Maximum number of torsions in rotamer. */
 #define MAX_TOR_CON  8        /* Maximum number of constraints per torsion. */
 
@@ -137,16 +137,16 @@ Copyright (C) 2009 The Scripps Research Institute. All rights reserved.
  */
 #define TOR_ARG_LIST        &sInit.tor[0], &sInit.tor[1], &sInit.tor[2], &sInit.tor[3], &sInit.tor[4], &sInit.tor[5], &sInit.tor[6], &sInit.tor[7], &sInit.tor[8], &sInit.tor[9], &sInit.tor[10], &sInit.tor[11], &sInit.tor[12], &sInit.tor[13], &sInit.tor[14], &sInit.tor[15], &sInit.tor[16], &sInit.tor[17], &sInit.tor[18], &sInit.tor[19], &sInit.tor[20], &sInit.tor[21], &sInit.tor[22], &sInit.tor[23], &sInit.tor[24], &sInit.tor[25], &sInit.tor[26], &sInit.tor[27], &sInit.tor[28], &sInit.tor[29], &sInit.tor[30], &sInit.tor[31], &sInit.tor[32], &sInit.tor[33], &sInit.tor[34], &sInit.tor[35], &sInit.tor[36], &sInit.tor[37], &sInit.tor[38], &sInit.tor[39], &sInit.tor[40], &sInit.tor[41], &sInit.tor[42], &sInit.tor[43], &sInit.tor[44], &sInit.tor[45], &sInit.tor[46], &sInit.tor[47], &sInit.tor[48], &sInit.tor[49], &sInit.tor[50], &sInit.tor[51], &sInit.tor[52], &sInit.tor[53], &sInit.tor[54], &sInit.tor[55], &sInit.tor[56], &sInit.tor[57], &sInit.tor[58], &sInit.tor[59], &sInit.tor[60], &sInit.tor[61], &sInit.tor[62], &sInit.tor[63], &sInit.tor[64], &sInit.tor[65], &sInit.tor[66], &sInit.tor[67], &sInit.tor[68], &sInit.tor[69], &sInit.tor[70], &sInit.tor[71], &sInit.tor[72], &sInit.tor[73], &sInit.tor[74], &sInit.tor[75], &sInit.tor[76], &sInit.tor[77], &sInit.tor[78], &sInit.tor[79], &sInit.tor[80], &sInit.tor[81], &sInit.tor[82], &sInit.tor[83], &sInit.tor[84], &sInit.tor[85], &sInit.tor[86], &sInit.tor[87], &sInit.tor[88], &sInit.tor[89], &sInit.tor[90], &sInit.tor[91], &sInit.tor[92], &sInit.tor[93], &sInit.tor[94], &sInit.tor[95], &sInit.tor[96], &sInit.tor[97], &sInit.tor[98], &sInit.tor[99], &sInit.tor[100], &sInit.tor[101], &sInit.tor[102], &sInit.tor[103], &sInit.tor[104], &sInit.tor[105], &sInit.tor[106], &sInit.tor[107], &sInit.tor[108], &sInit.tor[109], &sInit.tor[110], &sInit.tor[111], &sInit.tor[112], &sInit.tor[113], &sInit.tor[114], &sInit.tor[115], &sInit.tor[116], &sInit.tor[117], &sInit.tor[118], &sInit.tor[119], &sInit.tor[120], &sInit.tor[121], &sInit.tor[122], &sInit.tor[123], &sInit.tor[124], &sInit.tor[125], &sInit.tor[126], &sInit.tor[127], &sInit.tor[128], &sInit.tor[129], &sInit.tor[130], &sInit.tor[131], &sInit.tor[132], &sInit.tor[133], &sInit.tor[134], &sInit.tor[135], &sInit.tor[136], &sInit.tor[137], &sInit.tor[138], &sInit.tor[139], &sInit.tor[140], &sInit.tor[141], &sInit.tor[142], &sInit.tor[143], &sInit.tor[144], &sInit.tor[145], &sInit.tor[146], &sInit.tor[147], &sInit.tor[148], &sInit.tor[149], &sInit.tor[150], &sInit.tor[151], &sInit.tor[152], &sInit.tor[153], &sInit.tor[154], &sInit.tor[155], &sInit.tor[156], &sInit.tor[157], &sInit.tor[158], &sInit.tor[159], &sInit.tor[160], &sInit.tor[161], &sInit.tor[162], &sInit.tor[163], &sInit.tor[164], &sInit.tor[165], &sInit.tor[166], &sInit.tor[167], &sInit.tor[168], &sInit.tor[169], &sInit.tor[170], &sInit.tor[171], &sInit.tor[172], &sInit.tor[173], &sInit.tor[174], &sInit.tor[175], &sInit.tor[176], &sInit.tor[177], &sInit.tor[178], &sInit.tor[179], &sInit.tor[180], &sInit.tor[181], &sInit.tor[182], &sInit.tor[183], &sInit.tor[184], &sInit.tor[185], &sInit.tor[186], &sInit.tor[187], &sInit.tor[188], &sInit.tor[189], &sInit.tor[190], &sInit.tor[191], &sInit.tor[192], &sInit.tor[193], &sInit.tor[194], &sInit.tor[195], &sInit.tor[196], &sInit.tor[197], &sInit.tor[198], &sInit.tor[199], &sInit.tor[200], &sInit.tor[201], &sInit.tor[202], &sInit.tor[203], &sInit.tor[204], &sInit.tor[205], &sInit.tor[206], &sInit.tor[207], &sInit.tor[208], &sInit.tor[209], &sInit.tor[210], &sInit.tor[211], &sInit.tor[212], &sInit.tor[213], &sInit.tor[214], &sInit.tor[215], &sInit.tor[216], &sInit.tor[217], &sInit.tor[218], &sInit.tor[219], &sInit.tor[220], &sInit.tor[221], &sInit.tor[222], &sInit.tor[223], &sInit.tor[224], &sInit.tor[225], &sInit.tor[226], &sInit.tor[227], &sInit.tor[228], &sInit.tor[229], &sInit.tor[230], &sInit.tor[231], &sInit.tor[232], &sInit.tor[233], &sInit.tor[234], &sInit.tor[235], &sInit.tor[236], &sInit.tor[237], &sInit.tor[238], &sInit.tor[239], &sInit.tor[240], &sInit.tor[241], &sInit.tor[242], &sInit.tor[243], &sInit.tor[244], &sInit.tor[245], &sInit.tor[246], &sInit.tor[247], &sInit.tor[248], &sInit.tor[249], &sInit.tor[250], &sInit.tor[251], &sInit.tor[252], &sInit.tor[253], &sInit.tor[254], &sInit.tor[255], &sInit.tor[256], &sInit.tor[257], &sInit.tor[258], &sInit.tor[259], &sInit.tor[260], &sInit.tor[261], &sInit.tor[262], &sInit.tor[263], &sInit.tor[264], &sInit.tor[265], &sInit.tor[266], &sInit.tor[267], &sInit.tor[268], &sInit.tor[269], &sInit.tor[270], &sInit.tor[271]
 
-#define ENERGY_CUTOFF 500.    /* Arbitrary intermolecular cutoff, above 
-                                 which intramolecular energy is not calculated. 
+#define ENERGY_CUTOFF 500.    /* Arbitrary intermolecular cutoff, above
+                                 which intramolecular energy is not calculated.
 				 (appears unused in AD code - perhaps great idea - MP 2012)
 				 */
-#define HI_NRG_JUMP_FACTOR 2. /* Scale up the range of random jumps by this when the 
+#define HI_NRG_JUMP_FACTOR 2. /* Scale up the range of random jumps by this when the
                                  last energy was higher than ENERGY_CUTOFF. */
 
 #ifdef USE_8A_NBCUTOFF
 
-#define NBC         8.00      /* Non-bonded cutoff for internal energy calc./Ang*/ 
+#define NBC         8.00      /* Non-bonded cutoff for internal energy calc./Ang*/
 #define NEINT    2048         /* Number of values in internal energy table */
 #define A_DIV     100.00      /* Used in distance look-up table. */
 
@@ -197,7 +197,7 @@ Copyright (C) 2009 The Scripps Research Institute. All rights reserved.
 /* Prevent internal electrostatic energy calculation from blowing up! */
 
 #define RMIN_ELEC 0.5         /* if atoms closer than this in Angstroms, clamp distance in internal elec. calc.*/
-#define RMIN_ELEC2  (RMIN_ELEC * RMIN_ELEC) /* if atoms closer than this, clamp square 
+#define RMIN_ELEC2  (RMIN_ELEC * RMIN_ELEC) /* if atoms closer than this, clamp square
                                                of distance in internal elec. calc.*/
 
 /* Set reasonable limits on Rij and epsilon-ij values*/
@@ -209,13 +209,13 @@ Copyright (C) 2009 The Scripps Research Institute. All rights reserved.
 
 
 /* Statistics output frequency in GAs */
- 
+
 #define OUTLEV0_GENS 0   /* Never output based on number of generations */
 #define OUTLEV1_GENS 100 /* output every 100 generations */
 #define OUTLEV2_GENS 1 /* output every generation */
 
 /* logFile outlev handling: low to high
- * This is AutoDock only, not AutoGrid so not certain it should be here 
+ * This is AutoDock only, not AutoGrid so not certain it should be here
  * in constants.h but that's where I'm putting it for now - MPique 2012
  */
 
@@ -234,7 +234,7 @@ Copyright (C) 2009 The Scripps Research Institute. All rights reserved.
 const struct {
 	int value;
 	char *key;
-	} outlev_lookup[] = { 
+	} outlev_lookup[] = {
  {LOGMIN, "min"},
  {LOGMINCLUST, "mincluster"},
  {LOGBASIC, "basic"},
@@ -246,14 +246,14 @@ const struct {
  {LOGRUNVV, "runvv"},
  {LOGRUNVVV, "runvvv"},
  {LOGETABLES, "etables"},
- {LOGNBINTE, "nbinte"}, 
- {LOGNBINTEV, "nbintev"}, 
+ {LOGNBINTE, "nbinte"},
+ {LOGNBINTEV, "nbintev"},
  {0, ""} /* last */ };
 #endif  /* CONSTANTS */
 
 
-/*----------------------------------------------------------------------------* 
- * Macros,                                                                    * 
+/*----------------------------------------------------------------------------*
+ * Macros,                                                                    *
  *----------------------------------------------------------------------------*/
 
 #ifndef MACROS
@@ -282,7 +282,7 @@ const struct {
 
 /*
  * #define        RedFac(s0,sN,N)                expf( logf((sN)/(s0)) / ((N)-1))
- * N.B. You must compile with ANSI (-Aa on HPPA) in order to use expf 
+ * N.B. You must compile with ANSI (-Aa on HPPA) in order to use expf
  * and logf, otherwise Reals are automatically promoted to doubles.
  */
 #define        RedFac(s0,sN,N)    exp( log((sN)/(s0)) / ((N)-1))
@@ -327,14 +327,14 @@ const struct {
 /* BoundedNdiel never returns an index greater than (NDIEL - 1). */
 #define BoundedNdiel(i)           (((i) > NDIEL_1) ? NDIEL_1 : (i))
 
-#define is_out_grid(x,y,z) (((x)<=(xlo)) || ((x)>=(xhi)) || ((y)<=(ylo)) || ((y)>=(yhi)) || ((z)<=(zlo)) || ((z)>=(zhi))) 
+#define is_out_grid(x,y,z) (((x)<=(xlo)) || ((x)>=(xhi)) || ((y)<=(ylo)) || ((y)>=(yhi)) || ((z)<=(zlo)) || ((z)>=(zhi)))
 
 #define is_out_grid_info(x,y,z) (((x)<=(info->lo[X])) || ((x)>=(info->hi[X])) || ((y)<=(info->lo[Y])) || ((y)>=(info->hi[Y])) || ((z)<=(info->lo[Z])) || ((z)>=(info->hi[Z])))
 
 #define is_zero(x) ((x) > -APPROX_ZERO) && ((x) < APPROX_ZERO) ? 1 : 0
 
-/*----------------------------------------------------------------------------* 
- * Random numbers,                                                            * 
+/*----------------------------------------------------------------------------*
+ * Random numbers,                                                            *
  *----------------------------------------------------------------------------*/
 
 // This is platform-independent RNG-based.  All are wrappers around ignlgi() - I think! MPique 2014
@@ -359,8 +359,8 @@ const struct {
 #endif  /* MACROS */
 
 
-/*----------------------------------------------------------------------------* 
- * Debugging,                                                                 * 
+/*----------------------------------------------------------------------------*
+ * Debugging,                                                                 *
 .*----------------------------------------------------------------------------*/
 
 #ifndef DEBUG_STUFF
@@ -385,8 +385,8 @@ const struct {
 #endif /* DEBUG_STUFF */
 
 
-/*----------------------------------------------------------------------------* 
- * For system timings,                                                        * 
+/*----------------------------------------------------------------------------*
+ * For system timings,                                                        *
  *----------------------------------------------------------------------------*/
 
 #ifndef sgi
@@ -407,28 +407,28 @@ const struct {
 #define _PDB_FORMATS
 
 
-/*----------------------------------------------------------------------------* 
- * Format for output                                                          * 
+/*----------------------------------------------------------------------------*
+ * Format for output                                                          *
  *----------------------------------------------------------------------------*/
 
-/* 
+/*
  * PDB
- * 
- * Standard PDB v2.1 format with segID, element and charge: 
+ *
+ * Standard PDB v2.1 format with segID, element and charge:
  */
 /* serial, name, altLoc, resName, chainID, resSeq, iCode, x, y, z, occupancy, tempFactor, segID, element, charge */
-#define FORMAT_PDB2_ATOM       "ATOM  %5d %4s%1s%3s %1s%4d%1s   %8.3f%8.3f%8.3f%6.2f%6.2f      %4s%2s%2s" 
+#define FORMAT_PDB2_ATOM       "ATOM  %5d %4s%1s%3s %1s%4d%1s   %8.3f%8.3f%8.3f%6.2f%6.2f      %4s%2s%2s"
 
-/* 
+/*
  * PDBQ
- * 
+ *
  * Note: the initial %s is the prefix
  * ""          gives normal PDBQ.
  * "DOCKED: "  gives DOCKED prefix.
  * Note: no new line at end of some of these formats:
  */
 
-/* 
+/*
  * PDBQT format
  */
 //  The numbers in parentheses are the columns that this field spans, using 0-based counting.
@@ -451,7 +451,7 @@ const struct {
 // |     |     |   ||   ||   |   |       |       |       |     temperature_factor (60-65)
 // |     |     |   ||   ||   |   |       |       |       |     |         charge (70-75)
 // |     |     |   ||   ||   |   |       |       |       |     |         |      atom_type (77-78)
-// |     |     |   ||   ||   |   |       |       |       |     |         |      |                      
+// |     |     |   ||   ||   |   |       |       |       |     |         |      |
 // 65432154321 43211321 143211   876543218765432187654321654321654321    654321 21
 // ATOM     10  HO4 PGP     1      22.065  29.222  38.002  1.00  0.00     0.210 HD
 #define FORMAT_PDBQT_ATOM_RESSTR         "%sATOM  %5d%-19.19s%8.3f%8.3f%8.3f%+6.2f%+6.2f    %+6.3f %-2s%s" // prefix + 79 chars + suffix
@@ -459,7 +459,7 @@ const struct {
 // #define FORMAT_PDBQT_ATOM_RESNUM         "%sATOM  %5d %.8s%5d     %8.3f%8.3f%8.3f%+6.2f%+6.2f    %+6.3f %-2s"
 // #define FORMAT_PDBQT_ATOM_RANKRUN_STR      "ATOM  %5d %.13s     %8.3f%8.3f%8.3f%6d%6d    %+6.2f %8.3f %-2s\n"
 // #define FORMAT_PDBQT_ATOM_RUN_NUM          "ATOM  %5d %.8s%5d     %8.3f%8.3f%8.3f%6d%+6.2f    %6.3f %-2s\n"
-                                                                  
+
 #endif /* _PDB_FORMATS */
 
 /*
@@ -530,6 +530,6 @@ const Real TK = 298.15;      // Room temperature, in K
 enum Unbound_Model { Unbound_Default=0, Unbound_Same_As_Bound=1, Extended=2, Compact=3, User=4 };
 #endif
 
-/*----------------------------------------------------------------------------* 
- * End of file                                                                * 
+/*----------------------------------------------------------------------------*
+ * End of file                                                                *
  *----------------------------------------------------------------------------*/
