@@ -29,6 +29,8 @@ install:
   - conda install -y -c nsls2forge mgltools
   - conda list
   - pip list
+  - python -VV
+  - python3 -VV
 
 script:
   - |
