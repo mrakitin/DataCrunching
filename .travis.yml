@@ -33,6 +33,7 @@ install:
 script:
   - |
     set -e
+    ulimit -s unlimited
     cd ProcessingScripts/
     ./example.sh
     echo "CC(C[C@@H](B(O)O)NC(=O)[C@@H](NC(=O)c1cnccn1)Cc1ccccc1)C DB-84" > ena+db-small.can
