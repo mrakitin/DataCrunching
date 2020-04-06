@@ -84,3 +84,35 @@ gridcenter="11.826,-3.145,-2.889"
 npts="42,48,52"
 ```
 
+
+## Pocket 13
+
+From the sphere positions and radii we given in `ADRP_Apo_6vxs_pockets.pqr`
+we collect:
+
+| coordinate | min     | radius | max     | radius |
+| ---------- | ------- | ------ | ------- | ------ |
+| x          |  -7.460 | 3.50   |   0.675 | 4.09   |
+| y          | -21.955 | 3.50   | -12.336 | 3.94   |
+| z          | -31.907 | 4.43   | -20.196 | 4.22   |
+
+Compute from the results in the table above the lower and upper limits of 
+the coordinates. The lower limits are calculated by taking the minimum value
+of a coordinate and subtracting the sphere radius. The upper limits are 
+calculated by taking the maximum value of a coordinate and adding the sphere
+radius. The number of points are calculated from the length and using that the
+default grid spacing is 0.375 Angstrom (note that the number of grid points
+has to be even in every dimension). This way we get:
+
+| coordinate | min     | max     | middle   | length | npts |
+| ---------- | ------- | ------- | -------- | ------ | ---- |
+| x          | -10.960 |   4.765 |  -3.097  | 15.725 | 42   |
+| y          | -25.455 |  -8.396 | -16.925  | 17.059 | 46   |
+| z          | -36.337 | -15.976 | -26.156  | 20.361 | 56   |
+
+Hence the gridcenter and npts parameters are
+```
+gridcenter="-3.097,-16.925,-26.156"
+npts="42,46,56"
+```
+
