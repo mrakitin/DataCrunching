@@ -24,9 +24,9 @@ before_install:
 
 install:
   - export GIT_FULL_HASH=`git rev-parse HEAD`
-  - conda create -n covid19 -c nsls2forge -c conda-forge python=$TRAVIS_PYTHON_VERSION openbabel autodock
+  - conda create -y -n covid19 -c nsls2forge -c conda-forge python=$TRAVIS_PYTHON_VERSION openbabel autodock
   - conda activate covid19
-  - conda install -c nsls2forge mgltools
+  - conda install -y -c nsls2forge mgltools
   - conda list
   - pip list
 
