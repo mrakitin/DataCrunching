@@ -47,3 +47,7 @@ script:
     # Test the fix for the "unknown W# atom type" issue:
     echo "Nc1nc2NC3OC4COP(=O)([O-])O[Mg]OP(=O)(OCC5C6=C(S[W]7(SC(=C4S7)C3Nc2c(=O)[nH]1)S6)C1Nc2c(NC1O5)nc([nH]c2=O)N)[O-] DB-1573" > ena+db-small.can
     ./example.sh
+
+    # Test the missing Cr atom from AD4_parameters.dat:
+    echo "[O-][51Cr](=O)(=O)[O-] DB-10072" > ena+db-small.can
+    ./example.sh
