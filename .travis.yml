@@ -2,8 +2,18 @@ language: python
 
 jobs:
   include:
-    - python: 3.6
-    - python: 3.7
+    - name: "Test a standard example"
+      python: 3.7
+      env: CALC_ENTRY=
+    - name: "Test the fix for the AD4_parameters.dat"
+      python: 3.7
+      env: CALC_ENTRY="CC(C[C@@H](B(O)O)NC(=O)[C@@H](NC(=O)c1cnccn1)Cc1ccccc1)C DB-84"
+    - name: "Test the fix for the 'unknown W# atom type' issue"
+      python: 3.7
+      env: CALC_ENTRY="Nc1nc2NC3OC4COP(=O)([O-])O[Mg]OP(=O)(OCC5C6=C(S[W]7(SC(=C4S7)C3Nc2c(=O)[nH]1)S6)C1Nc2c(NC1O5)nc([nH]c2=O)N)[O-] DB-1573"
+    - name: "Test the missing Cr atom from AD4_parameters.dat"
+      python: 3.7
+      env: CALC_ENTRY="[O-][51Cr](=O)(=O)[O-] DB-10072"
 
 before_install:
   - |
@@ -37,17 +47,9 @@ script:
     set -e
     ulimit -s unlimited
     cd ProcessingScripts/
-    # Test a standard example:
-    ./example.sh
 
-    # Test the fix for the AD4_parameters.dat:
-    echo "CC(C[C@@H](B(O)O)NC(=O)[C@@H](NC(=O)c1cnccn1)Cc1ccccc1)C DB-84" > ena+db-small.can
-    ./example.sh
+    if [ ! -z "$CALC_ENTRY" ]; then
+        echo "$CALC_ENTRY" > ena+db-small.can
+    fi
 
-    # Test the fix for the "unknown W# atom type" issue:
-    echo "Nc1nc2NC3OC4COP(=O)([O-])O[Mg]OP(=O)(OCC5C6=C(S[W]7(SC(=C4S7)C3Nc2c(=O)[nH]1)S6)C1Nc2c(NC1O5)nc([nH]c2=O)N)[O-] DB-1573" > ena+db-small.can
-    ./example.sh
-
-    # Test the missing Cr atom from AD4_parameters.dat:
-    echo "[O-][51Cr](=O)(=O)[O-] DB-10072" > ena+db-small.can
     ./example.sh
