@@ -52,4 +52,6 @@ script:
         echo "$CALC_ENTRY" > ena+db-small.can
     fi
 
+    cat ena+db-small.can
+
     ./example.sh
