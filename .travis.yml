@@ -37,7 +37,7 @@ before_install:
 
 install:
   - export GIT_FULL_HASH=`git rev-parse HEAD`
-  - conda create -y -n covid19 -c nsls2forge -c conda-forge python=$TRAVIS_PYTHON_VERSION openbabel==3.0.0 autodock
+  - conda create -y -n covid19 -c nsls2forge -c conda-forge python=$TRAVIS_PYTHON_VERSION openbabel==3.0.0.post158 autodock
   - conda activate covid19
   # The following step needs to be performed separately as it installs
   # Python 2.5 and replaces environment's python executable (we expect it), so
