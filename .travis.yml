@@ -47,7 +47,7 @@ install:
   - python -VV
   - python3 -VV
   - obabel -V
-  - ulimit -s unlimited && autodock4 --version && autogrid --version
+  - ulimit -s unlimited && autodock4 --version && autogrid4 --version
   - pythonsh --help
 
 script:
