@@ -7,6 +7,9 @@ parallel -a $1 --timeout=3600 --colsep '\s+' -j ${SLURM_CPUS_ON_NODE} "
     cp ../data/{3}.pdb .;
     echo {1} {2} > {2}_smi.can; 
     ../scripts/run_all_crunch.sh {2}_smi.can {3} {4} {5} &> {2}_stdout.txt; 
+    echo delete all temporary files;
+    rm *.pdb *.pdbqt;
+    rm */*.dpf */*.fld */*.glg */*.gpf */*.map */*.mol2 */*.pdbqt */*.xyz
     "
 
 
