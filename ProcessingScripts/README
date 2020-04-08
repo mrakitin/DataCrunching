@@ -161,7 +161,7 @@ the best docked structures, and visually inspect whether these structures make
 sense. This can be done with additional tools.
 
 Submit parallel job using GNU parallel
----------------------
+--------------------------------------
 1) Put protein PDB file to ./data, copy ./scripts to your working directory.
 2) Put protein list and corresponding pocket, grid, grid parameter in a file.
 3) Edit ./scripts/run_sub_par.sh to change the timeout limit
