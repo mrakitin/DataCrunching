@@ -36,15 +36,24 @@ install:
   - export GIT_FULL_HASH=`git rev-parse HEAD`
   - conda create -y -n covid19 -c nsls2forge -c conda-forge python=$TRAVIS_PYTHON_VERSION openbabel autodock
   - conda activate covid19
+  # The following step needs to be performed separately as it installs
+  # Python 2.5 and replaces environment's python executable (we expect it), so
+  # that the 'pythonsh' tool works correctly. For other purposes, 'python3'
+  # should be used.
   - conda install -y -c nsls2forge mgltools
+  - env | sort -u
   - conda list
   - pip list
   - python -VV
   - python3 -VV
+  - obabel -V
+  - autodock4 --version && autogrid --version
+  - pythonsh --help
 
 script:
   - |
     set -e
+    # Unlimit stack size to avoid openbabel crashes.
     ulimit -s unlimited
     cd ProcessingScripts/
 
@@ -52,6 +61,9 @@ script:
         echo "$CALC_ENTRY" > ena+db-small.can
     fi
 
+    echo -e "The contents of 'ena+db-small.can':"
+    python3 -c "print('=' * 80)"
     cat ena+db-small.can
+    python3 -c "print('=' * 80, '\n')"
 
     ./example.sh
