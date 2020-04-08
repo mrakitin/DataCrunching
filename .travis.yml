@@ -47,13 +47,13 @@ install:
   - python -VV
   - python3 -VV
   - obabel -V
-  - autodock4 --version && autogrid --version
+  - ulimit -s unlimited && autodock4 --version && autogrid --version
   - pythonsh --help
 
 script:
   - |
     set -e
-    # Unlimit stack size to avoid openbabel crashes.
+    # Unlimit stack size to avoid autodock crashes.
     ulimit -s unlimited
     cd ProcessingScripts/
 
