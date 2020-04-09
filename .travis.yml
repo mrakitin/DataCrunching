@@ -2,8 +2,21 @@ language: python
 
 jobs:
   include:
-    - python: 3.6
-    - python: 3.7
+    - name: "Test a standard example"
+      python: 3.7
+      env: CALC_ENTRY=
+    - name: "Test the fix for the AD4_parameters.dat"
+      python: 3.7
+      env: CALC_ENTRY="CC(C[C@@H](B(O)O)NC(=O)[C@@H](NC(=O)c1cnccn1)Cc1ccccc1)C DB-84"
+    - name: "Test the fix for the 'unknown W# atom type' issue"
+      python: 3.7
+      env: CALC_ENTRY="Nc1nc2NC3OC4COP(=O)([O-])O[Mg]OP(=O)(OCC5C6=C(S[W]7(SC(=C4S7)C3Nc2c(=O)[nH]1)S6)C1Nc2c(NC1O5)nc([nH]c2=O)N)[O-] DB-1573"
+    - name: "Test the missing Cr atom from AD4_parameters.dat"
+      python: 3.7
+      env: CALC_ENTRY="[O-][51Cr](=O)(=O)[O-] DB-10072"
+    - name: "Test the ZeroDivisionError in openbabel"
+      python: 3.7
+      env: CALC_ENTRY="c1ccc(cc1)Cc1noc(n1)[C@]12CCC[C@@H]2CN(C1)Cc1cncnc1 Z1849470798"
 
 before_install:
   - |
@@ -24,26 +37,36 @@ before_install:
 
 install:
   - export GIT_FULL_HASH=`git rev-parse HEAD`
-  - conda create -y -n covid19 -c nsls2forge -c conda-forge python=$TRAVIS_PYTHON_VERSION openbabel autodock
+  - conda create -y -n covid19 -c nsls2forge -c conda-forge python=$TRAVIS_PYTHON_VERSION openbabel==3.0.0.post158 autodock
   - conda activate covid19
+  # The following step needs to be performed separately as it installs
+  # Python 2.5 and replaces environment's python executable (we expect it), so
+  # that the 'pythonsh' tool works correctly. For other purposes, 'python3'
+  # should be used.
   - conda install -y -c nsls2forge mgltools
+  - env | sort -u
   - conda list
   - pip list
   - python -VV
   - python3 -VV
+  - obabel -V
+  - ulimit -s unlimited && autodock4 --version && autogrid4 --version
+  - pythonsh --help
 
 script:
   - |
     set -e
+    # Unlimit stack size to avoid autodock crashes.
     ulimit -s unlimited
     cd ProcessingScripts/
-    # Test a standard example:
-    ./example.sh
 
-    # Test the fix for the AD4_parameters.dat:
-    echo "CC(C[C@@H](B(O)O)NC(=O)[C@@H](NC(=O)c1cnccn1)Cc1ccccc1)C DB-84" > ena+db-small.can
-    ./example.sh
+    if [ ! -z "$CALC_ENTRY" ]; then
+        echo "$CALC_ENTRY" > ena+db-small.can
+    fi
 
-    # Test the fix for the "unknown W# atom type" issue:
-    echo "Nc1nc2NC3OC4COP(=O)([O-])O[Mg]OP(=O)(OCC5C6=C(S[W]7(SC(=C4S7)C3Nc2c(=O)[nH]1)S6)C1Nc2c(NC1O5)nc([nH]c2=O)N)[O-] DB-1573" > ena+db-small.can
+    echo -e "The contents of 'ena+db-small.can':"
+    python3 -c "print('=' * 80)"
+    cat ena+db-small.can
+    python3 -c "print('=' * 80, '\n')"
+
     ./example.sh

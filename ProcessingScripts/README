@@ -159,3 +159,12 @@ the relevant information. For every ligand a line is added to the summary file.
 After reviewing the results you might want to extract the bound structures of
 the best docked structures, and visually inspect whether these structures make
 sense. This can be done with additional tools.
+
+Submit parallel job using GNU parallel
+--------------------------------------
+1) Put protein PDB file to ./data, copy ./scripts to your working directory.
+2) Put protein list and corresponding pocket, grid, grid parameter in a file.
+3) Edit ./scripts/run_sub_par.sh to change the timeout limit
+4) Edit sub_gnu_parallel_per_node.sl to the file name for smiles and protein list, run time, number of nodes.
+The sub_gnu_parallel_per_process.sl will call srun once for every molecule.
+5) run `sbatch sub_gnu_parallel_per_node.sl` to submit the job to the batch system.
