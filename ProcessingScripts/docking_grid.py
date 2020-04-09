@@ -1,4 +1,26 @@
 #!/usr/bin/env python3
+'''
+Compute the grid box for a receptor pocket
+
+In drug-screening Fpocket may be used to find a binding pocket in a protein.
+A pocket is given by a collection of alpha-spheres. Each alpha-sphere is 
+defined as a sphere that touches 4 atoms, demarcating the opening of 
+the pocket. Each sphere is given by its position and radius in a
+.pqr file.
+
+The autogrid4 program builds a docking grid on which the potentials for
+docking are expressed. The grid is defined in a rectangular box that
+encompasses the binding pocket. The box is given by the position of its
+center, and the number of grid points in each spatial dimension.
+The number of grid points combined with the grid spacing determines
+the lengths of each side of the box. This script uses the Autodock
+default grid spacing.
+
+This script takes a collection of alpha-spheres and computes the
+specification of the grid box for autogrid4 as the box center
+and the numbers of grid points. In essence it automates the calculation
+done in DataCrunching/Data/TARGETS/3CLPro_pockets/README.md.
+'''
 
 def parse_line(line):
     '''
