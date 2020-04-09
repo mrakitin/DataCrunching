@@ -172,7 +172,7 @@ if __name__ == "__main__":
     print(f"| ---------- | ------- | ------- | -------- | ------ | ---- |")
     print(f"| x          | {xmin:.3f} | {xmax:.3f} | {xcen:.4f} | {xlen:.3f} | {xpts} |")
     print(f"| y          | {ymin:.3f} | {ymax:.3f} | {ycen:.4f} | {ylen:.3f} | {ypts} |")
-    print(f"| y          | {zmin:.3f} | {zmax:.3f} | {zcen:.4f} | {zlen:.3f} | {zpts} |")
+    print(f"| z          | {zmin:.3f} | {zmax:.3f} | {zcen:.4f} | {zlen:.3f} | {zpts} |")
     print(f"")
     print(f"```")
     print(f"npts=\"{xpts},{ypts},{zpts}\"")
