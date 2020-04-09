@@ -1,6 +1,6 @@
 # Orf7a_pockets
 
-- orf7a.pdb: was created from `iorf7a_deposit_minusH_out.pdb` by just keeping
+- orf7a.pdb: was created from `orf7a_deposit_minusH_out.pdb` by just keeping
   the protein atoms.
 
 We have taken the following pockets from the priority list:
